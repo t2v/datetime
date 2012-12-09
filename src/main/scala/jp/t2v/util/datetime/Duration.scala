@@ -3,7 +3,7 @@ package jp.t2v.util.datetime
 import javax.time.{Period, Duration}
 
 
-class DurationOps(underlying: Duration) {
+class DurationOps(underlying: Duration) extends Ordered[Duration] {
   
   def +(p: Period): Period = p + underlying
   def +(d: Duration): Duration = underlying.plus(d)
@@ -12,6 +12,8 @@ class DurationOps(underlying: Duration) {
   def -(d: Duration): Duration = underlying.minus(d)
 
   def *(scalar: Long): Duration = underlying.multipliedBy(scalar)
+
+  def compare(that: Duration): Int = underlying.compareTo(that)
 
 }
 trait ToDurationOps {
