@@ -2,6 +2,9 @@
 
 A Scala Wrapper for JSR310
 
+ **This project is suspended until ThreeTen is unstable.**
+ **Please examine using [nscala-time](https://github.com/nscala-time/nscala-time) instead of t2v-datatime.**
+
 # dependencies
 
 - Scala 2.10.0-RC5
